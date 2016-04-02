@@ -103,7 +103,8 @@ function scrubParams(param){
 
 function writeToFile(data){
   var fs = require('fs');
-  var stream = fs.createWriteStream("my_cool_json.json");
+  var fullApi = "/Users/reselbob/Documents/H2Wellness/data/fullapi.json"
+  var stream = fs.createWriteStream(fullApi);
   stream.once('open', function(fd) {
     stream.write(data);
     stream.end();
